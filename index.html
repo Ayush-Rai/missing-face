@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Missing Face</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script defer src="face-api.min.js"></script>
+  	<script defer src="face.js"></script>
+  	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+  	<script src='home1.js'></script>
+</head>
+<body>
+	<div id="fade-wrapper">
+	</div>
+	<div id="loading">
+		  <div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-double-ring"><div></div><div></div><div><div></div></div><div><div></div></div></div><style type="text/css">@keyframes lds-double-ring {
+		    0% {
+		      -webkit-transform: rotate(0);
+		      transform: rotate(0);
+		    }
+		    100% {
+		      -webkit-transform: rotate(360deg);
+		      transform: rotate(360deg);
+		    }
+		  }
+		  @-webkit-keyframes lds-double-ring {
+		    0% {
+		      -webkit-transform: rotate(0);
+		      transform: rotate(0);
+		    }
+		    100% {
+		      -webkit-transform: rotate(360deg);
+		      transform: rotate(360deg);
+		    }
+		  }
+		  @keyframes lds-double-ring_reverse {
+		    0% {
+		      -webkit-transform: rotate(0);
+		      transform: rotate(0);
+		    }
+		    100% {
+		      -webkit-transform: rotate(-360deg);
+		      transform: rotate(-360deg);
+		    }
+		  }
+		  @-webkit-keyframes lds-double-ring_reverse {
+		    0% {
+		      -webkit-transform: rotate(0);
+		      transform: rotate(0);
+		    }
+		    100% {
+		      -webkit-transform: rotate(-360deg);
+		      transform: rotate(-360deg);
+		    }
+		  }
+		  .lds-double-ring {
+		    position: relative;
+		  }
+		  .lds-double-ring div {
+		    box-sizing: border-box;
+		  }
+		  .lds-double-ring > div {
+		    position: absolute;
+		    width: 168px;
+		    height: 168px;
+		    top: 16px;
+		    left: 16px;
+		    border-radius: 50%;
+		    border: 8px solid #000;
+		    border-color: #facd9e transparent #facd9e transparent;
+		    -webkit-animation: lds-double-ring 2s linear infinite;
+		    animation: lds-double-ring 2s linear infinite;
+		  }
+		  .lds-double-ring > div:nth-child(2),
+		  .lds-double-ring > div:nth-child(4) {
+		    width: 148px;
+		    height: 148px;
+		    top: 26px;
+		    left: 26px;
+		    -webkit-animation: lds-double-ring_reverse 2s linear infinite;
+		    animation: lds-double-ring_reverse 2s linear infinite;
+		  }
+		  .lds-double-ring > div:nth-child(2) {
+		    border-color: transparent #389798 transparent #389798;
+		  }
+		  .lds-double-ring > div:nth-child(3) {
+		    border-color: transparent;
+		  }
+		  .lds-double-ring > div:nth-child(3) div {
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    -webkit-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		  }
+		  .lds-double-ring > div:nth-child(3) div:before,
+		  .lds-double-ring > div:nth-child(3) div:after {
+		    content: "";
+		    display: block;
+		    position: absolute;
+		    width: 8px;
+		    height: 8px;
+		    top: -8px;
+		    left: 72px;
+		    background: #facd9e;
+		    border-radius: 50%;
+		    box-shadow: 0 160px 0 0 #facd9e;
+		  }
+		  .lds-double-ring > div:nth-child(3) div:after {
+		    left: -8px;
+		    top: 72px;
+		    box-shadow: 160px 0 0 0 #facd9e;
+		  }
+		  .lds-double-ring > div:nth-child(4) {
+		    border-color: transparent;
+		  }
+		  .lds-double-ring > div:nth-child(4) div {
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    -webkit-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		  }
+		  .lds-double-ring > div:nth-child(4) div:before,
+		  .lds-double-ring > div:nth-child(4) div:after {
+		    content: "";
+		    display: block;
+		    position: absolute;
+		    width: 8px;
+		    height: 8px;
+		    top: -8px;
+		    left: 62px;
+		    background: #389798;
+		    border-radius: 50%;
+		    box-shadow: 0 140px 0 0 #389798;
+		  }
+		  .lds-double-ring > div:nth-child(4) div:after {
+		    left: -8px;
+		    top: 62px;
+		    box-shadow: 140px 0 0 0 #389798;
+		  }
+		  .lds-double-ring {
+		    width: 200px !important;
+		    height: 200px !important;
+		    -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+		    transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+		  }
+		  </style></div>
+	</div>
+	<div >
+		<h1 class="title">MISSING FACE</h1>
+		<div class="container">
+			<div class='image'>
+				<div class="div1">
+					<img id="blah" src="images/upload.png" alt="your image" />
+				</div>
+				<input type="file" id="imageUpload" onchange="readURL(this);"/>
+				<button class='btn'><label for="imageUpload" >Choose file</label></button>
+				
+			</div>
+			<div class='folder'>
+				<div class="div1">
+					<h1>folder</h1>
+				</div>
+				<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+				<button class="btn"><label for="filepicker" >Choose folder</label></button>
+			</div>
+		</div>
+		<div id="msgfaces">
+			<h3>Missing Faces</h3>
+			<ul id="myList"></ul>
+		</div>
+	</div>
+</body>
+</html>

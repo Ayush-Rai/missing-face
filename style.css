@@ -1,0 +1,101 @@
+body{
+  margin: 0;
+  padding: 0;
+  align-items: center;
+
+}
+#filepicker,#imageUpload{
+	display: none;
+}
+.container{
+	display: flex;
+	margin : 20px 50px 30px 50px;
+	justify-content: space-around;
+
+}
+#loading {
+  position: fixed;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  margin: auto;
+  top: 50%;
+  left: 40%;
+  bottom: 0%;
+  right: 0%;
+}
+img{
+	border-radius: 10px;
+	height: 300px;
+	width: 250px;
+	opacity: 0.1;
+}
+#myList{
+	padding-left: 0px;
+	list-style: none;
+}
+
+.div1{
+	background-color: rgba(97,87,123,0.6);
+	text-align: center;
+	height: 300px;
+	width: 450px;
+
+	border-radius: 10px;
+	border: 1px solid black;
+}
+.btn{
+	height: 40px;
+	width: 120px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	margin: 15px;
+	background-color: rgba(64, 206, 12,0.6);
+	border: 1px solid rgba(64, 206, 12,0.8);
+}
+.btn:focus{
+	outline: 0;
+}
+.btn:hover{
+	height: 40px;
+	width: 120px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	margin: 15px;
+	background-color: rgba(255, 255, 255,1);
+	border: 1px solid rgba(64, 206, 12,0.8);
+	cursor: pointer; 
+}
+
+.image, .folder{
+	border-radius: 10px;
+	text-align: center;
+	height: 325px;
+	width: 450px;
+	padding: 20px;
+
+}
+#msgfaces{
+	border: 1px solid black;
+	border-radius: 10px;
+	height: 225px;
+	width:450px;
+	margin: auto;
+	text-align: center;
+}
+.title{
+	font-size: 40px;
+	margin:auto;
+	letter-spacing: 3px;
+}
+#fade-wrapper {
+    position:absolute;
+  background:#000;
+  opacity:.8;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index:1
+}
